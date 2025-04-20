@@ -15,13 +15,20 @@ return {
 			require("everforest").setup()
 		end,
 	},
-  {
-    "oxfist/night-owl.nvim",
-    name="night-owl",
-    priority = 999,
-    config = function ()
-      require("night-owl").setup()
-      vim.cmd("colorscheme night-owl")
-    end
-  }
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+	{
+		"navarasu/onedark.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			style = "cool",
+		},
+	},
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{ "EdenEast/nightfox.nvim", name="nightfox", priority = 1000 }, -- lazy
 }
