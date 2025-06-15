@@ -13,4 +13,10 @@ return {
 			})
 		end,
 	},
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		config = function()
+			enable = true
+		end,
+	},
 }

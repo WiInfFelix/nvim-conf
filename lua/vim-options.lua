@@ -68,17 +68,6 @@ vim.api.nvim_create_autocmd("TermOpen", {
 	end,
 })
 
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "python",
-	callback = function()
-		vim.keymap.set(
-			"n",
-			"<C-d>m",
-			"<cmd>V/^\\s*def [a-zA-Z_]\\w*\\([^)]*\\):<CR>d",
-			{ desc = "Delete until next python method", buffer = true }
-		)
-	end,
-})
 
 vim.keymap.set("v", "<leader>cf", vim.lsp.buf.format, { desc = "Format selection" })
 vim.diagnostic.config({

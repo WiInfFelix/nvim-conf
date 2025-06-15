@@ -26,7 +26,7 @@ return {
     git = { enabled = true },
     statuscolumn = { enabled = true },
     lazygit = { enabled = true },
-    indent = { enabled = true }
+    indent = { enabled = true },
   },
   keys = {
     {
@@ -201,17 +201,24 @@ return {
     },
     {
       "<leader>dvs",
-      function ()
+      function()
         Snacks.dim.enable()
       end,
-      desc = "Dim on"
+      desc = "Dim on",
     },
     {
       "<leader>dvo",
-      function ()
+      function()
         Snacks.dim.disable()
       end,
-      desc = "Dim off"
-    }
+      desc = "Dim off",
+    },
+    {
+      "<leader>do",
+      function()
+        Snacks.dashboard.open()
+      end,
+      desc = "Open Snacks dashboard",
+    },
   },
 }
